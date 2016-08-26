@@ -25,6 +25,13 @@
         <p id="result"></p>
         
         <script>
+        document.getElementById("myText").addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode == 13) {
+                document.getElementById("myButton").click();
+            }
+        });
+            
         function myFunction() {
             var str = document.getElementById("myText").value; 
             var n = str.toUpperCase().search("PIZZA");
