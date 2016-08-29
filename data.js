@@ -2,7 +2,7 @@ function IncludeHTML() {
   var z, i, a, file, xhttp;
   z = document.getElementsByTagName("*");
   for (i = 0; i < z.length; i++) {
-    if (z[i].getAttribute("w3-include-html")) {
+    if (z[i].getAttribute("include-html")) {
       a = z[i].cloneNode(false);
       file = z[i].getAttribute("include-html");
       var xhttp = new XMLHttpRequest();
@@ -19,4 +19,8 @@ function IncludeHTML() {
       return;
     }
   }
+}
+
+function setSource() {
+  document.getElementById("include-html").innerHTML = "https://raw.githubusercontent.com/rklavin/IsItPizza/master/Index.html"
 }
